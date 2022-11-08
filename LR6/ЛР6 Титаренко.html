@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>lr6</title>
+    <style>
+        td, th {
+            padding: 3px;
+            background-color: lightblue;
+        }
+
+        button {
+            background: #BF9486;
+            border-radius: 10px;
+        }
+
+        .answ {
+            width: 40%; 
+            text-align: justify; 
+            padding: 1%;
+        }
+    </style>
+
+    
+
+    <body>
+
+        <table align="center" style="text-align: center; border: 5px solid #B1BF86; border-radius: 10px;">
+            <tbody>
+                <tr>
+                    <th colspan="3"><h2>ТР-03, Титаренко Ольга, 21 варіант</h2></th>
+                </tr>
+                <tr style="font-size: large;">
+                    <th style=" background: #B1BF86;">Опис</th>
+                    <th style=" background: #B1BF86;">Завдання</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            1. Створити об’єкт «Користувач» з властивостями «Прізвище»,
+                            «Ім’я».
+                        </p>
+                    </td>
+                    <script>
+                        
+                        let user = {
+                            name: "Olha",
+                            surname: "Tytarenko",
+                        };
+                           
+
+                        function task1() {
+                            document.getElementById('func1').innerHTML += `<br> Greetings to ${user.name} ${user.surname}`;
+                        }
+
+                    </script>
+                    <td class="answ">
+
+                        <button type="button" onclick="task1()">*Тиць 1*</button>
+                        
+                        <div id="func1"></div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            2. Створити об’єкт «Студент», що містить властивості
+                            «Спеціальність», «Група» і методи: додати, змінити, видалити
+                            дані.
+                        </p>
+                    </td>
+
+
+                    <script>
+                        let stud = {
+                            speciality: "speciality",
+                            group: "group",
+                            keys: ['speciality', 'group'],
+
+                            constructor(speciality, group) {
+                                this.speciality = speciality;
+                                this.group = group;
+                            },
+
+                            add() {
+                                let sp = prompt("Enter the speciality of student");
+                                let gr = prompt("Enter the group of student");
+
+                                if (this[sp] == undefined) {
+                                    this[sp] = gr;
+                                }
+
+                                document.getElementById('func2').innerHTML += `<br> The student of speciality ${sp} is in group ${gr}`;
+
+                            },
+
+                            edit() {
+                                let editField = prompt("Enter the new speciality ");
+                                let editSt = prompt("Enter the the new group");
+
+                                if (this[editField] != undefined) {
+                                    this[editField] = editSt;
+                                }
+                                document.getElementById('func2').innerHTML += `<br><br> Edited information! <br> The student of speciality ${editField} is in group ${editSt}`;
+                            },
+
+                            delSt() {
+                                let delField = prompt("Enter the tupe of info to delete");
+
+                                if (this[delField] != undefined) {
+                                    delete(this[delField]);
+                                }
+                                document.getElementById('func2').innerHTML += `<br><br> The information was deleted`;
+                            }
+                        }
+
+                        function student() {
+                            s = stud('122', 'tr03');
+                            stud.add();
+                            stud.edit();
+                            //stud.delSt();
+                        };    
+                    </script>
+
+                    <td class="answ">
+
+                        <button type="button" onclick="student()">*Тиць 2*</button>
+
+                        <div id="func2"></div><br>
+                     
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td>
+                        <p>
+                            3. Реалізувати копіювання властивостей і методів об’єктів
+                            «Користувач» і «Студент».
+                        </p>
+                    </td>
+                    <script>
+                        function task3() {
+                            let copy = {};
+                            Object.assign(copy, stud, user);
+
+                            document.getElementById('func3').innerHTML += `<br> Name: ${copy.name}`;
+                            document.getElementById('func3').innerHTML += `<br> Surname: ${copy.surname}`;
+                            document.getElementById('func3').innerHTML += `<br> Speciality: ${copy.speciality}`;
+                            document.getElementById('func3').innerHTML += `<br> Grop: ${copy.group}`;
+                        }
+                    </script>
+                    <td class="answ">
+                        <button type="button" onclick="task3()">*Тиць 3*</button>
+                        <div id="func3"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            4. Додати в прототип об’єкту «Студент» метод «Показати дані»
+                        </p>
+                    </td>
+                    <script>
+                        function data(name, surname, speciality, group) {
+                            if (name != undefined) {
+                                this.name = name;
+                            } else {
+                                this.name = "Name";
+                            }
+
+                            if (surname != undefined) {
+                                this.surname = surname;
+                            } else {
+                                this.surname = "Surname";
+                            }
+
+                            if (speciality != undefined) {
+                                this.speciality = speciality;
+                            } else {
+                                this.speciality = "Speciality";
+                            }
+
+                            if (group != undefined) {
+                                this.group = group;
+                            } else {
+                                this.group = "Group";
+                            }
+                        }
+
+                        function task4() {
+                            data.prototype.showData = function () {
+                                document.getElementById('func4').innerHTML += `<br> The student ${this.name} ${this.surname} studies ${this.speciality} in group ${this.group}`;
+                            }
+
+                            let name = prompt("Input name");
+                            let surname = prompt("Input surname");
+                            let speciality = prompt("Input speciality");
+                            let group = prompt("Input group");
+
+                            let proto = new data(name, surname, speciality, group);
+
+                            proto.showData();
+                        }
+                    </script>
+                    <td class="answ">
+
+                        <button type="button" onclick="task4()">*Тиць 4*</button>
+
+                        <div id="func4"></div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            5. Створити об’єкт «Успішність», що наслідує властивості і методи
+                            об’єкту «Студент» і має додаткові властивості «Предмети»,
+                            «Оцінки» і метод «Розрахунок середнього балу». Перевизначити в
+                            об’єкті «Успішність» метод «Показати дані».
+                        </p>
+                    </td>
+                    <script>
+                        function usr() {
+                            let success = new data('John', 'Snow', '122', 'tr03', '');
+
+                            success.subjectsAndMarks = {
+                                math: 90,
+                                bio: 95,
+                                pe: 85
+                            }
+
+                            success.average = function () {
+                                return ((success.subjectsAndMarks.math + success.subjectsAndMarks.bio + success.subjectsAndMarks.pe) / 3);
+                            }
+                       
+                            data.prototype.showData = function () {
+                                document.getElementById('func5').innerHTML += `<br> The student ${this.name} ${this.surname} studies ${this.speciality} in group ${this.group} and has an average point ${this.average()}`;
+                            }
+
+                            success.showData();
+
+                        }
+                    </script>
+                    <td class="answ">
+
+                        <button type="button" onclick="usr()">*Тиць 5*</button>
+
+                        <div id="func5"></div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            6. Реалізувати класи «Студент» і «Успішність» з такими же
+                            методами і властивостями як і попередні об’єкти. «Успішність»
+                            наслідує методи та властивості від «Студент». При реалізації
+                            використовувати геттери і сеттери, наприклад, для перевірки
+                            даних чи виведення в різних виглядах інформацію.
+                        </p>
+                    </td>
+                    <script> 
+
+                        class Student{
+                            constructor(name, surname) {
+                                this.name = name;
+                                this.surname = surname;
+                            }
+
+                            get fullName() {
+                                return `${this.name} ${this.surname}`;
+                            }
+
+                            set fullName(value) {
+                                [this.name, this.surname] = value.split(" ");
+                            }
+                        }
+
+                        class Success extends Student{
+                            constructor(name, surname, speciality, group, averagePoint) {
+                                super(name, surname);
+                               
+                                this.speciality = speciality;
+                                this.group = group;
+                                this.averagePoint = averagePoint;
+                            }
+
+                            get studSuccess() {
+                                return ` <br> ${this.name} <br> ${this.surname} <br> ${this.speciality} <br> ${this.group} <br> ${this.averagePoint}`;
+                            }
+
+                            set stutdSuccess(value) {
+                                [this.name, this.surname, this.speciality, this.group, this.averagePoint] = value.split(" ");
+                            }
+
+                            showData() {
+                                document.getElementById('func6').innerHTML += `<br> The student ${this.name} ${this.surname} studies ${this.speciality} in group ${this.group} and got the point ${this.averagePoint}`;
+                            }
+                        }
+
+                        function tsk6() {
+                            studnt = new Success('Harry', 'Potter', '121', 'Gryffindor', '98');
+                            studnt.showData();
+                        }
+                    </script>
+                    <td class="answ">
+
+                        <button type="button" onclick="tsk6()">*Тиць 6*</button>
+
+                        <div id="func6"></div>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+    </body>
+
+</html>

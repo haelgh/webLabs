@@ -1,0 +1,589 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <title>adapt</title>
+    <style>
+       html {
+         scroll-behavior: smooth;
+         background: #121215;
+         font: normal normal 700 fantasy;
+         color: #121215;
+         margin: 2% 5%;
+      }
+
+      a{
+        text-decoration: none;
+        color: #2b3016;
+      }
+
+      headItems{
+        padding: 1%;
+
+        font-size: large;
+
+      }
+
+      .section{
+        display: flex;
+        background: #eff0ef;
+      }
+
+      button{
+        background: #f89345;
+      }
+
+      .menu{
+        width: 100%;
+        text-align: center;
+      }
+
+      ul{
+        display: flex;
+        width: 100%;
+      }
+
+      li{
+        margin: 0 1%;
+        background: #eff0ef;
+        list-style: none;
+        width: 21%;
+      }
+
+
+      img{
+        margin: 1%;
+      }
+
+      #service{
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        width: 100%;
+      }
+
+      serv{
+        margin: 0 1% 1% 1%;
+        padding: 1%;
+        background: #eff0ef;
+        width: 30%;
+      }
+
+      .imgServ{
+        width: 50%;
+        float: left;
+        margin-right: 5%;
+      }
+
+      .txtServ{
+        font-size: smaller;
+      }
+
+
+       #Students{
+            align-items: stretch;
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+       }
+
+      .container {
+        background: #eff0ef;
+        width: 20%;
+        border: 1% solid;
+        margin: 0 0.5%;
+        padding: 1%;
+      }
+       .container figcaption {
+          font-size: smaller;
+          margin: 0 15%;
+       }
+
+       .imgStud{
+         width: 100%;
+       }
+
+       #Contacts{
+          margin: 2%;
+          background: #eff0ef;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+       }
+
+       cont{
+           margin: 0 5%;
+       }
+
+       .imgItem{
+            width: 40%;
+            align: middle;
+       }
+
+       input[type="submit"]{
+         background: #f89345;
+    }
+
+
+@media all and (max-width: 1920px) {
+.section {
+    justify-content: center;
+    align-items: center;
+  }
+   .imgItem{
+    padding: 2%;
+    width: 100%;
+  }
+
+.headItems{
+     align-items: stretch;
+}
+
+
+  headItems{
+    width: 100%;
+    font-size: xx-large;
+  }
+
+  button{
+    font-size: xx-large;
+  }
+
+li{
+font-size: xx-large;
+}
+
+  .txtServ{
+    font-size: x-large;
+  }
+
+    .imgStud{
+        height: 600px;
+    }
+
+  .studSign{
+    font-size: xx-large;
+  }
+
+  .container{
+    margin-bottom: 2%;
+    width: 30%;
+  }
+  .container figcaption {
+    font-size: x-large;
+    margin: 0 15%;
+  }
+     #Contacts{
+       flex-flow: row wrap;
+     }
+     cont{
+        font-size: x-large;
+     }
+    input[type="search"]{
+        font-size: x-large;
+    }
+    input[type="submit"]{
+        font-size: x-large;
+    }
+
+@media all and (max-width: 1024px) {
+.section {
+    justify-content: center;
+    align-items: center;
+  }
+   .imgItem{
+    padding: 2%;
+    width: 100%;
+  }
+
+.headItems{
+     align-items: stretch;
+}
+
+
+  headItems{
+    width: 100%;
+    font-size: large;
+  }
+
+  button{
+    font-size: medium;
+  }
+
+li{
+font-size: large;
+}
+
+  .txtServ{
+    font-size: large;
+  }
+
+  .imgServ{
+    width: 100%;
+  }
+
+   .studSign{
+    font-size: x-large;
+  }
+
+  #Students{
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .container{
+    margin-bottom: 2%;
+    width: 45%;
+  }
+  .container figcaption {
+    font-size: large;
+    margin: 0 15%;
+  }
+     #Contacts{
+        padding-top: 2%;
+       flex-flow: row wrap;
+     }
+     cont{
+        font-size: large;
+     }
+    input[type="search"]{
+        font-size: large;
+    }
+    input[type="submit"]{
+        font-size: large;
+    }
+
+@media all and (max-width: 768px) {
+  .section {
+    flex-flow: row wrap;
+  }
+   .imgItem{
+    padding: 2%;
+    width: 100%;
+  }
+
+button{
+    font-size: medium;
+}
+
+  headItems{
+    width: 100%;
+    font-size: large;
+    text-align: center;
+  }
+
+li{
+font-size: medium;
+}
+
+  #service{
+    flex-direction: column;
+  }
+  serv{
+    width: 100%;
+  }
+
+.txtServ{
+    font-size: medium;
+  }
+
+  #Students{
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+    .imgStud{
+        height: 400px;
+    }
+
+   .studSign{
+    font-size: large;
+  }
+
+  .container{
+    margin-bottom: 2%;
+    width: 45%;
+  }
+  .container figcaption {
+    font-size: small;
+    margin: 0 15%;
+  }
+     #Contacts{
+       flex-flow: row wrap;
+       padding-top: 3%;
+     }
+
+     cont{
+        font-size: medium;
+     }
+     .s{
+        width: 80%;
+     }
+    input[type="search"]{
+        font-size: medium;
+    }
+    input[type="submit"]{
+        font-size: medium;
+    }
+
+@media all and (max-width: 480px) {
+  .section {
+    flex-flow: row wrap;
+  }
+   .imgItem{
+    padding: 2%;
+    width: 100%;
+  }
+
+  button{
+    font-size: small;
+  }
+
+
+
+  headItems{
+    width: 100%;
+    font-size: small;
+    text-align: center;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  li{
+    width: 100%;
+    justify-content: center;
+    margin-left: -10%;
+    margin-bottom: 2%;
+    font-size: medium;
+  }
+
+  .txtServ{
+    font-size: medium;
+  }
+
+  #service{
+    flex-direction: column;
+  }
+  serv{
+    width: 100%;
+  }
+
+  .studSign{
+    font-size: large;
+  }
+  #Students{
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 100%;
+  }
+
+  .container{
+    margin-bottom: 2%;
+    width: 45%;
+  }
+
+
+
+  .container figcaption {
+    font-size: x-small;
+    margin: 0 15%;
+  }
+     #Contacts{
+       flex-flow: row wrap;
+     }
+
+     cont{
+        font-size: small;
+     }
+     .s{
+        width: 80%;
+     }
+    input[type="search"]{
+        font-size: small;
+    }
+    input[type="submit"]{
+        font-size: small;
+    }
+
+
+@media all and (max-width: 320px) {
+
+  .section {
+    flex-flow: row wrap;
+  }
+   .imgItem{
+    padding: 2%;
+    width: 100%;
+  }
+
+  button{
+    font-size: xx-small;
+  }
+
+
+  headItems{
+    width: 100%;
+    font-size: small;
+    text-align: center;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  li{
+    width: 100%;
+    justify-content: center;
+    margin-left: -15%;
+    margin-bottom: 2%;
+    font-size: small;
+  }
+
+  .txtServ{
+    font-size: x-small;
+  }
+
+  #service{
+    flex-direction: column;
+  }
+  serv{
+    width: 100%;
+    font-size: xx-small;
+  }
+
+
+    .imgStud{
+        height: 200px;
+    }
+
+.studSign{
+    font-size: medium;
+}
+  #Students{
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .container{
+    margin-bottom: 2%;
+    width: 50%;
+  }
+  .container figcaption {
+    font-size: xx-small;
+    margin: 0 15%;
+  }
+     #Contacts{
+       flex-flow: row wrap;
+     }
+
+    cont{
+        font-size: xx-small;
+     }
+     .s{
+        width: 75%;
+     }
+    input[type="search"]{
+        font-size: xx-small;
+    }
+    input[type="submit"]{
+        font-size: xx-small;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<div class="section">
+    <headItems class="imgItem">
+        <img src="https://cutewallpaper.org/22/harry-potter-laptop-wallpapers/1540221335.jpg"
+                width="100%" height="auto">
+    </headItems>
+
+    <headItems>
+        Hogwarts School Of Witchcraft and Wizardry
+    </headItems>
+
+    <headItems>
+        <a href="tel:+000000000">Owl Postal Service</a>
+        <button><a href="mailto:olhatytarenko@gmail.com">Order the owl</a></button>
+    </headItems>
+</div>
+
+<div class="menu">
+    <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#Students">Students</a></li>
+        <li><a href="#Contacts">Contacts</a></li>
+    </ul>
+</div>
+
+<div id="service">
+    <serv>
+        <div class="imgServ"><img src="https://d3wo5wojvuv7l.cloudfront.net/t_rss_itunes_square_1400/images.spreaker.com/original/d4b29718ec6ae78225e252e878784df8.jpg"
+                                                   width="100%" height="auto"></div>
+        <b>Owl Post</b>
+        <p class="txtServ">At Hogwarts, owls live in the Owlery in the West Tower and deliver mail to students once a day, at breakfast – though more urgent messages are frequently delivered to Harry in his dormitory.</p>
+
+
+    </serv>
+    <serv>
+        <div class="imgServ"><img src="https://i.pinimg.com/originals/cf/6c/9a/cf6c9a6df97c4124423dbf682e9ae5bf.jpg"
+        width="100%" height="auto"></div>
+        <b>Quality education</b>
+        <p class="txtServ">A fifth year was a student at Hogwarts School of Witchcraft and Wizardry who was in their fifth year of magical education. Fifth years were typically fifteen to sixteen years of age. </p>
+    </serv>
+    <serv>
+        <div class="imgServ"><img src="https://64.media.tumblr.com/91fc7e101394cc2c4da9c47dbbb6abe5/tumblr_oxm41m7K101wcrfrvo2_1280.jpg"
+                                                   width="100%" height="auto"></div>
+        <b>Rich library</b>
+        <p class="txtServ">The Hogwarts Library was located off of a corridor on the first-floor of Hogwarts Castle and contained tens of thousands of books on thousands of shelves.</p>
+    </serv>
+</div>
+
+
+
+<p class="studSign" style="background: #eff0ef; margin: 5% 0 1% 0; padding: 1% 5%;">Outstanding students</p>
+<div id="Students">
+
+    <figure class="container">
+        <div><img class="imgStud" src="https://static.wikia.nocookie.net/shipping/images/9/9d/Harry_Potter_-_Harry_Potter_Character_Photo.jpg/revision/latest/top-crop/width/360/height/450?cb=20200204110144&path-prefix=ru" width="100%" height="auto"><div>
+        <figcaption>Harry James Lilly Rom Potter </figcaption>
+    </figure>
+
+    <figure class="container">
+        <div><img  class="imgStud" src="https://miro.medium.com/max/768/1*obDCz57X7D2Kd1XvcdI0Iw.jpeg" width="100%" height="auto"><div>
+            <figcaption>Hermione Granger</figcaption>
+    </figure>
+
+    <figure class="container">
+        <div><img  class="imgStud" src="http://pm1.narvii.com/6528/9681280cbd2d67608fb6e5892120183f42e6ac7a_00.jpg" width="100%" height="auto"><div>
+            <figcaption>Ronald Weasely</figcaption>
+    </figure>
+
+    <figure class="container">
+        <div><img  class="imgStud" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUFRGAg3UnwNCVqqcgHurbwjd1mYnihPX49A&usqp=CAU" width="100%" height="auto"><div>
+            <figcaption>Bellatrix Lestrange</figcaption>
+    </figure>
+</div>
+
+
+<div id="Contacts">
+    <cont>2021 (c) Copyright</cont>
+    <cont><a href="tel:+380508383175">Owl Postal Service</a></cont>
+    <cont>
+        <form>
+        <p><input type="search" class="s" placeholder="Search">
+            <input type="submit" value="Find"></p>
+        </form>
+    </cont>
+</div>
+</body>
+</html>

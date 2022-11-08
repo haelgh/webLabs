@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>adapt</title>
+    <style>
+        td, th {
+            padding: 3px;
+            background-color: lightblue;
+        }
+
+        button {
+            background: #BF9486;
+            border-radius: 10px;
+        }
+    </style>
+
+    
+
+    <body>
+
+        <table align="center" style="text-align: center; border: 5px solid #B1BF86; border-radius: 10px;">
+            <tbody>
+                <tr>
+                    <th colspan="3"><h2>ТР-03, Титаренко Ольга, 21 варіант</h2></th>
+                </tr>
+                <tr style="font-size: large;">
+                    <th style=" background: #B1BF86;">Опис</th>
+                    <th style=" background: #B1BF86;">Завдання</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            Напишіть функцію, що шукає послідовність b1..bn , що
+                            розраховується за формулою bі=і!+і^2, де і=1,..., n; n та крок -
+                            задає користувач. Результат зберігається в масиві. Вивести
+                            отриманий масив.
+                        </p>
+                        <p>
+                            Потім додати до початку масиву 5 останніх елементів
+                            початкового масиву. Вивести отриманий масив, вставлену
+                            частину виділити іншим кольором.
+                        </p>
+                    </td>
+                    <script>
+
+                        function factorial(n) {
+                            if (n == 0 || n == 1) {
+                                return 1;
+                            } else {
+                                return n * factorial(n - 1);
+                            }
+                        }
+
+
+                        function sequence() {
+                            var n, step;
+                            n = document.getElementById('inp_n').value;
+                            n = parseInt(n);
+                            step = document.getElementById('inp_i').value;
+                            step = parseInt(step);
+
+                            var arr = new Array();
+                            var j = 1;
+                            var res;
+                            for (let i = 0; i < n; i += step) {
+                                res = factorial(j) + Math.pow(j, 2);
+                                //arr[i] = "<br /> arr[" + i + "] = " + j + "! + " + j + "^2 = " + res;
+                                arr[i] = " " + res;
+                                j++;
+                            }
+                            
+                            tx = "<br><br>Заповнений масив:";
+                            document.getElementById('tx').innerHTML = tx;
+                            document.getElementById('func1').innerHTML = arr;
+
+
+                            outTxt = "<br>Кольовий масив:";
+                            document.getElementById('func11').innerHTML = outTxt;
+                            var len = n - 5;
+                            var k = 0;
+                            var colorArr1 = new Array();
+                            for (let i = n - 1; i >= len; i--) {
+                                colorArr1[k++] = " " + arr[i];
+                            }
+                            colorArr1 = colorArr1.join(' ');
+                            var col = document.getElementById('func122');
+                            col.style.color = "#404530";
+                            document.getElementById('func122').innerHTML = colorArr1;
+                            var colorArr2 = new Array();
+                            k = 0;
+                            for (let i = 0; i < n - 5; i++) {
+                               colorArr2[k++] = " " + arr[i];
+                            }
+                            
+                            colorArr2 = colorArr2.join(' ');
+                            document.getElementById('func123').innerHTML = colorArr2;
+                        }
+                    </script>
+                    <td style="width: 45%; text-align: justify; padding: 1%;">
+                        <p>
+                            <label for="inp_n">Введіть кількість членів послідовності:</label>
+                            <input type="number" class="form-control" id="inp_n" style="width: 5%;">
+                        </p>
+                        <p>
+                            <label for="inp_i">Введіть крок:</label>
+                            <input type="number" class="form-control" id="inp_i" style="width: 5%;">
+                        </p>
+                        <button type="button" onclick="sequence()">*Тиць 1*</button>
+                        <div id="tx"></div>
+                        <div id="func1"></div>
+                        <div id="func11"></div>
+                        <span id="func122"></span><span id="func123"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            Створити двовимірний масив NxM. Всі елементи парних
+                            рядків дорівнюють 1. Інші довільні, але відмінні від 1.
+                            Вивести отриманий масив.
+                        </p>
+                    </td>
+
+                    <script>
+
+                        function arraysToTable(arrays) {
+                            const table = document.createElement('table');
+                            table.setAttribute('border', '1');
+                            table.style.borderColor = '#BF9486';
+                            for (const row of arrays) {
+                                const tr = table.insertRow();
+                                for (const number of row) {
+                                    const td = tr.insertCell();
+                                    td.textContent = number;
+                                }
+                            }
+                            return table;
+                        }
+
+                        
+                        
+                        function doubleArray() {
+                            var douAr = new Array();
+                            rows = document.getElementById('inp_rows').value;
+                            rows = parseInt(rows);
+                            cols = document.getElementById('inp_cols').value;
+                            cols = parseInt(cols);
+                            min = -10,
+                            max = 10;
+                            for (let i = 0; i < rows; i++) {
+                                douAr[i] = [];
+                                for (let j = 0; j < cols; j++) {
+                                    if (i % 2 == 0) {
+                                        douAr[i][j] = 1;
+                                    } else {
+                                        let x = Math.floor(Math.random() * (max - min + 1) + min);
+                                        if (x != 1) {
+                                            douAr[i][j] = x;
+                                        } else {
+                                            douAr[i][j] = x + Math.floor(Math.random() * (max - min + 1) + min);
+                                        }
+                                    }
+                                    
+                                }
+                            } 
+                            doubleAr.replaceWith(arraysToTable(douAr));
+                        }
+                    </script>
+
+                    <td style="width: 45%; text-align: justify; padding: 1%;">
+                        <p>
+                            <label for="inp_rows">Введіть кількість рядків масиву:</label>
+                            <input type="number" class="form-control" id="inp_rows" style="width: 5%;">
+                        </p>
+                        <p>
+                            <label for="inp_cols">Введіть кількість стовпчиків:</label>
+                            <input type="number" class="form-control" id="inp_cols" style="width: 5%;">
+                        </p>
+                            <button type="button" onclick="doubleArray()">*Тиць 2*</button>
+                            <div id="doubleAr"></div>
+                        <p>
+                            <span id="func2"></span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td>
+                        <p>
+                            Створити асоціативний масив, в який додати елементи з
+                            даними про користувача (Прізвище, Ім’я, По батькові).
+                            Додати значення до нього. Додати ще пару «ключ:стать».
+                            Вивести ключі з даними.
+                        </p>
+                    </td>
+                    <script>
+                        function task3() {
+                            var userDetail = new Map([
+                                ['name', 'Kate'],
+                                ['surname', 'Smith'],
+                                ['patronymic', 'Smithson']
+                            ]);
+                           
+
+                            for (let user of userDetail) {
+                                document.getElementById('func3').innerHTML += user.join(': ') + "<br>";
+                            }
+
+                            userDetail.set('sex', 'female');
+
+                            document.getElementById('func3').innerHTML +=  "<br>";
+                            for (let user of userDetail) {
+                                document.getElementById('func3').innerHTML += user.join(': ') + "<br>";
+                            }
+                        
+                        }
+                    </script>
+                    <td style="width: 45%; text-align: justify; padding: 1%;">
+                        <button type="button" onclick="task3()">*Тиць 3*</button>
+                        <div id="func3"></div>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+    </body>
+
+</html>

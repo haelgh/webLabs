@@ -1,0 +1,715 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Grid</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+        body{
+            overflow-x: hidden;
+            
+        }
+
+        .container {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 30% auto;
+            grid-template-rows: repeat(3, 500px) 300px;
+            grid-template-areas:"header header header"
+                                "main main main"
+                                "main main main"
+                                "footer footer footer";
+            margin: 0;
+            align-items: center;
+            justify-items: stretch;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+
+        .container > header {
+            grid-area: header;
+            grid-row: 1 / 2;
+            grid-column: 1 / 4;
+            height: 100%;
+            align-self: stretch;
+            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(header.jpg);
+            background-size: cover;
+            color: white;
+            text-align: center;
+            justify-items: center;
+        }
+
+        .p1 {
+            font-size: 60px;
+        }
+
+        .p2 {
+            font-size: 40px;
+            margin-top: -3%;
+        }
+
+        .fa {
+            font-size: 20px;
+            width: 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+        }
+
+        header .fa {
+            font-size: 40px;
+            width: 40px;
+        }
+
+        .fa:hover {
+            opacity: 0.8;
+        }
+
+
+        .fa-facebook {
+            background: white;
+            color: DarkGoldenRod;
+            padding: 10px;
+            margin: 3px;
+        }
+
+        .fa-twitter {
+            background: white;
+            color: DarkGoldenRod;
+            padding: 10px;
+            margin: 3px;
+        }
+
+        .fa-google {
+            background: white;
+            color: DarkGoldenRod;
+            padding: 10px;
+            margin: 3px;
+        }
+
+        .fa-linkedin {
+            background: white;
+            color: DarkGoldenRod;
+            padding: 10px;
+            margin: 3px;
+        }
+
+        .fa-angle-right {
+            color: DarkGoldenRod;
+        }
+
+        button {
+            background: #976e11;
+            color: white;
+            border: 1px solid #20170f;
+            border-radius: 10px;
+            margin: 1%;
+        }
+
+
+
+        header form {
+            text-align: end;
+            margin-top: -5%;
+        }
+
+        header button {
+            font-size: 25px;
+        }
+
+        .menu {
+            font-size: 30px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .menu li {
+            display: inline;
+        }
+
+
+
+
+        .container > .ftr1 {
+            grid-area: footer;
+            grid-column: 1; 
+            grid-row: 4 / 5;
+        }
+
+        .container > .ftr2 {
+            grid-area: footer;
+            grid-column: 2;
+            grid-row: 4 / 5;
+        }
+        .container > .ftr3 {
+            grid-area: footer;
+            grid-column: 3;
+            grid-row: 4 / 5;
+        }
+
+
+        .ftr1, .ftr2, .ftr3 {
+            color: white;
+            background: black;
+            height: 100%;
+        }
+
+
+
+
+        .ftr3 li {
+            margin-left: -5%;
+        }
+
+        hr{
+            border-color: #785813;
+            width: 98%;
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 2px;
+        }
+
+        
+
+        .txt1, .vintage, .bycicles, .txt2, .wheel {
+            text-align: center;
+        }
+
+        .txt1 {
+           grid-area: main;
+           grid-row: 2 / 3;
+           grid-column: 1;
+           margin-top: 20%;
+           height: 100%;
+           width: 100%;
+           
+        }
+
+        .txt1Img {
+            width:95%;
+            height:95%;
+            z-index: 1; 
+            margin-top: -6%;
+        }
+
+        .vintage {
+            grid-area: main;
+            grid-row: 2 / 3;
+            grid-column: 2 / 4;
+            height: 100%;
+            width: 100%;
+            
+        }
+
+        .bycicles {
+            grid-area: main;
+            grid-row: 3 / 4;
+            grid-column: 1;
+            height: 100%;
+            width: 100%;
+        }
+
+        .txt2 {
+            grid-area: main;
+            grid-row: 3 / 4;
+            grid-column: 2;
+            height: 100%;
+            width: 100%;
+        }
+
+        .txt2Img {
+            width: 119%;
+            margin-top: -8.5%; 
+            margin-left: -9.5%;
+        }
+
+        .wheel {
+            grid-area: main;
+            grid-row: 3 / 4;
+            grid-column: 3;
+            height: 100%;
+            width: 100%;
+        }
+
+        @media only screen and (width:320px) {
+
+            .container {
+                grid-template-rows: 200px 200px 1fr 200px 1fr repeat(3, 200px);
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "main"
+                    "main"
+                    "main"
+                    "footer"
+                    "footer"
+                    "footer";
+                align-items: center;
+            }
+
+            .menu {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            header .fa {
+                font-size: 7px;
+                width: 7px;
+            }
+
+            .p1 {
+                font-size: x-small;
+            }
+
+            .p2 {
+                font-size: xx-small;
+            }
+
+            header form {
+                font-size: 10px;
+                margin-top: 1px;
+                text-align: center;
+            }
+
+            header button {
+                font-size:10px;
+                
+            }
+
+            form .fa-caret-down {
+                font-size: 10px;
+            }
+
+
+            figcaption {
+                font-size: 13px;
+            }
+
+        .txt2Img, .txt2 .fa-caret-down, .txt1 .fa-caret-down, .fa-compass, .fa-road ,.txt1Img {
+            display: none;
+        }
+
+
+
+            .bycicles {
+                height: 100%;
+                grid-column: 1 / 4;
+                grid-row: -4 / -5;
+            }
+
+                .bycicles img {
+                    height: 101%;
+                }
+
+            .ftr1, .ftr2, .ftr3 {
+                font-size: 13px;
+               
+            }
+
+            .container > .ftr1 {
+                grid-area: footer;
+                grid-column: 1 / 4;
+                grid-row: -3 / -4;
+                text-align: center;
+            }
+
+            .container > .ftr2 {
+                grid-area: footer;
+                grid-column: 1 / 4;
+                grid-row: -2 / -3;
+                text-align:center;
+            }
+
+            .container > .ftr3 {
+                grid-area: footer;
+                grid-column: 1 / 4;
+                grid-row: -1 / -2;
+            }
+
+
+
+                .ftr2 button {
+                    font-size: xx-small;
+                }
+
+            .vintage {
+                display: none;
+            }
+
+            .txt1 {
+                grid-column: 1 / 4;
+                grid-row: 2;
+                justify-self: center;
+            }
+
+            .wheel {
+                grid-area: main;
+                grid-row: -7 / -6;
+                grid-column: 1 / 4;
+            }
+                .wheel img {
+                    height: auto;
+                }
+
+            .txt2 {
+                grid-column: 1 / 4;
+                grid-row: -5 / -6;
+                justify-self: center;
+            }
+        }
+
+        @media only screen and (width:480px) {
+
+            .container {
+                grid-template-rows: repeat(3, 250px) 250px;
+            }
+
+            .menu {
+                font-size: 15px;
+            }
+
+            header .fa {
+                font-size: 10px;
+                width: 10px;
+            }
+
+            .p1 {
+                font-size: small;
+            }
+
+            .p2 {
+                font-size:x-small;
+            }
+
+            header form {
+                text-align: center;
+                margin-top: 1px;
+            }
+
+            header button {
+                font-size: 15px;
+            }
+
+                form .fa-caret-down {
+                    font-size: 15px;
+                } 
+
+
+            figcaption {
+                font-size: xx-small;
+            }
+
+        .txt1Img{
+            display: none;
+        }
+
+            .txt1 .fa-caret-down {
+                display: none;
+            }
+
+            .txt2Img {
+                display: none;
+            }
+
+            .txt2 .fa-caret-down {
+                display: none;
+            }
+
+            .bycicles {
+                height: 100%;
+            }
+
+                .bycicles img {
+                    height: 101%;
+                }
+
+            .ftr1, .ftr2, .ftr3 {
+                font-size: xx-small;
+            }
+
+                .ftr2 button {
+                    font-size: xx-small;
+                }
+
+            .vintage {
+                display: none;
+            }
+
+            .txt1 {
+                grid-column: 1 / 3;
+                grid-row: 2;
+                justify-self: center;
+            }
+
+            .wheel {
+                grid-row: -4 / -3;
+                grid-column: 3 / 4;
+                
+            }
+
+            .txt2 {
+                grid-column: 2 / 4;
+                justify-self: center;
+            }
+        }
+
+
+        @media only screen and (width:768px) {
+
+            .container {
+                grid-template-rows: repeat(3, 300px) 300px;
+            }
+
+            .menu {
+                font-size: 20px;
+            }
+
+            header .fa {
+                font-size: 15px;
+                width: 15px;
+            }
+
+            .p1 {
+                font-size: x-large;
+            }
+
+            .p2 {
+                font-size: medium;
+            }
+
+            header form {
+                text-align: center;
+                margin-top: 1%;
+            }
+
+            header button {
+                font-size: 15px;
+            }
+
+
+            figcaption {
+                font-size: x-small;
+            }
+
+            .txt1Img {
+                display: none;
+            }
+
+            .txt1 .fa-caret-down {
+                display: none;
+            }
+
+            .txt2Img {
+                display: none;
+            }
+
+            .txt2 .fa-caret-down {
+                display: none;
+            }
+
+            .bycicles {
+                height: 100%;
+            }
+
+                .bycicles img {
+                    height: 101%;
+                }
+
+            .ftr1, .ftr2, .ftr3 {
+                font-size: x-small;
+            }
+
+            .ftr2 button{
+                font-size: x-small;
+            }
+        }
+
+
+        @media only screen and (width:1024px) {
+
+            header form {
+                display: none;
+            }
+
+
+            .txt1Img {
+                height: 150px;
+                width: 100%;
+                margin-left: -9%;
+                margin-top: 2px;
+            }
+
+            .txt1 .fa-caret-down {
+                display: none;
+            }
+
+            .txt2Img {
+                height: 325px;
+                width: 130%;
+                margin-left: -14%;
+                margin-top: 2px;
+            }
+
+            .txt2 .fa-caret-down {
+                display: none;
+            }
+
+            .bycicles {
+                height: 100%;
+            }
+                .bycicles img {
+                    height: 110%;
+                
+                }
+        }
+
+        @media only screen and (width:1920px) {
+
+            .txt1Img {
+               height: 200px;
+               width: 100%;     
+               margin-left: -9%;
+               margin-top: 2px;
+            }
+
+            .txt1 .fa-caret-down {
+                display: none;
+            }
+
+            .txt2Img {
+                height: 325px;
+                width: 125%;
+                margin-left: -6%;
+                margin-top: 2px;
+            }
+
+            .txt2 .fa-caret-down {
+                display: none;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="icons">
+                <a href="https://m.facebook.com/login/?locale2=ru_RU" class="fa fa-facebook"></a>
+                <a href="https://uk.wikipedia.org/wiki/%D0%A2%D0%B2%D1%96%D1%82%D1%82%D0%B5%D1%80" class="fa fa-twitter"></a>
+                <a href="https://www.google.com/webhp?hl=uk&sa=X&ved=0ahUKEwj20PvY75z0AhWCBBAIHbW4AnsQPAgI" class="fa fa-google"></a>
+                <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+            </div>
+
+            
+            <p class="p1">WE ARE GOODLAYERS</p>
+            <p class="p2">We're a Wordpress Theme Creator, USA based</p>
+            
+            <hr>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">All  &nbsp;/ &nbsp;</a></li>
+                    <li><a href="#txt">Package Design &nbsp;/&nbsp;</a></li>
+                    <li><a href="#footer">Profiles &nbsp;/&nbsp;</a></li>
+                    <li><a href="#footer">Website</a></li>
+                </ul>
+            </nav>
+            <form>
+                <button>Sort by<i class="fa fa-caret-down"></i></button>
+                <button>Order by<i class="fa fa-caret-down"></i></button>
+            </form>
+        </header>
+
+
+        <div class="txt1" id="txt">
+            <i class="fa fa-compass" aria-hidden="true" style="font-size: 40px; color: DarkGoldenRod;"></i>
+            <figure style="margin: 0 -5%; ">
+                <figcaption style="padding: 5% 5%;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </figcaption>
+                <i class="fa fa-caret-down" style="font-size: 50px; color: white; position: relative; margin-top: -10%; z-index: 3;"></i>
+                    <img src="txt1.png" class="txt1Img" >
+            </figure>
+        </div>
+
+        <div class="vintage">
+            <img src="vintage.jpg" width="100%" height="100%">
+        </div>
+
+        <div class="bycicles">
+            <img src="bycicles.jpg" width="100%" style="margin-top: -1%;">
+        </div>
+        <div class="txt2">
+            <i class="fa fa-road" aria-hidden="true" style="font-size: 40px; color: DarkGoldenRod;"></i>
+            <figure>
+                <figcaption>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </figcaption>
+                <i class="fa fa-caret-down" style="font-size: 60px; color: white; position: relative; z-index: 3;"></i>
+                <img src="txt2.png" class="txt2Img" >
+            </figure>
+        </div>
+        <div class="wheel">
+            <img src="bycicles2.jpg" width="100%">
+        </div>
+
+
+
+        <div class="ftr1" id="footer">
+            <h3>ABOUT US</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+        <div class="ftr2">
+            <h3>TAG CLOUD</h3>
+            <form>
+                <button>#TAG1</button>
+                <button>#tagsmth</button>
+                <button>#tageveryone</button>
+                <button>#tagn</button>
+                <button>#tagwebcssgrid</button>
+                <button>#tagn</button>
+                <button>#tagsthings</button>
+                <button>#tagtage</button>
+                <button>#tagab</button>
+                <button>#taggiveaway</button>
+                <button>#tagn</button>
+                <button>#tagtage</button>
+            </form>
+        </div>
+        <div class="ftr3">
+            <h3>RECENT POSTS</h3>
+            <ul>
+                <li><i class="fa fa-angle-right" aria-hidden="true"></i>Lorem ipsum dolor sit amet</li>
+                <li><i class="fa fa-angle-right" aria-hidden="true"></i>adipiscing elit</li>
+                <li><i class="fa fa-angle-right" aria-hidden="true"></i>Duis aute irure dolor in reprehenderit</li>
+                <li><i class="fa fa-angle-right" aria-hidden="true"></i>oluptate velit esse cillum dolore</li>
+                <li><i class="fa fa-angle-right" aria-hidden="true"></i>Excepteur sint occaecat cupidatat non</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="/default.css" rel="stylesheet"/>
+    <meta charset="utf-8"/>
+    <title>Forms</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            margin: 20px 100px;
+            background: #F5F5F5;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+            a:visited {
+                color: black;
+            }
+
+
+
+        p {
+            text-align: justify;
+        }
+
+
+        #menuLink {
+            margin: 10%;
+        }
+
+        #menu{
+            z-index: 5;
+            position: fixed;
+            width: 100%;
+            height: 15%;
+            text-align: center;
+            top: 17px;
+            left: 2px;
+            right: 2px;
+            background: #8A2BE2;
+        }
+
+            #menu li {
+                display: inline-block;
+                padding: 10px 75px;
+                border-right: 1px solid #222;
+                border-left: 1px solid #222;
+
+            }
+
+            #menu a{
+                 display: block;
+            }
+
+        li{
+            list-style: none;
+        }
+
+        #section1{
+            margin: 100px 0;
+        }
+
+
+        .left-block{
+            width:60%;
+            overflow: hidden;
+            float:left;
+        }
+
+        .right-block{
+            width: 40%;
+            overflow: hidden;
+            float: right;
+        }
+
+        .leftimg{
+            float:left;
+            margin: 10px;
+        }
+
+        .rightimg{
+            float:right;
+            margin: 10px;
+        }
+
+        .trio{
+            width: 60%;
+            height: 35%;
+            position: relative;
+        }
+
+        #layer1{
+            padding: 60px 30px 0 30px;
+            z-index: 1;
+        }
+
+        #layer2{
+            z-index: 4;
+            top: 50%;
+            left: 50%;
+        }
+
+          #layer3{
+            z-index: 3;
+            top: 0;
+            left:0;
+        }
+
+
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+       #section2{
+            width: 100%;
+            background-color: #D2B4DE;
+            padding: 10px 30px;
+        }
+            #section2 li{
+                padding: 10px 5px;
+            }
+
+
+#section3{
+    width: 100%;
+    background-color: #DDA0DD;
+    padding: 10px 30px;
+
+}
+
+#section3 input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+ button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+ .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    width:100%;
+    height:100%;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+
+ .container {
+    padding: 16px;
+}
+
+
+ span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+#section4{
+    width: 100%;
+    background-color: 	#9370DB;
+    padding: 10px 30px;
+
+}
+
+
+    </style>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li><a href="#">Головна</a></li>
+        <li><a href="#section2">Форма реєстрації</a></li>
+        <li><a href="#section3">Форма входу</a></li>
+        <li><a href="#section4">Форма зворотного зв'язку</a></li>
+    </ul>
+</div>
+
+<div class="main" id="section1">
+
+    <h1 align="center">Лабораторна робота №2. Виконала Титаренко Ольга Володимирівна, ТР-03</h1>
+    <hr align="center" width="95%" size="2" color="#000000"/>
+
+    <div class="left-block">
+        <p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Logotipo_do_Pottermore.png" height="40%"
+                width="30%" alt="smth" class="leftimg"/>
+            «Pottermore» — сайт Джоан Роулінг, розроблений TH_NK і спонсорований Sony.На сайті будуть продаватися
+            електронні
+            версії аудіокниги семи романів про Гаррі Поттера, а також буде представлено понад 18 тисяч слів додаткового
+            вмісту.<img src="https://www.be-in.ru/media/beingallery/gallery/simage/stp/image23473.jpg" width="45%"
+                        height="25%" alt="магазин" class="rightimg">
+            Також учасники зможуть знову «перечитати» книги, виконуючи різні завдання.
+            У кожного учасника буде свій профіль, приналежність до одного з чотирьох факультетів, своя чарівна паличка і
+            навіть рахунок у банку Ґрінґотс.
+            <img src="https://republic.ru/images/uploads/780/5a3c5f1b6f70fe7b8624914025c68235.jpeg" height="45%"
+                 width="30%"
+                 alt="Pottermore" class="leftimg"/>
+            Сайт запущений 31 липня 2011 року (у день народження Роулінг і персонажа Гаррі Поттера) для реєстрації
+            першого
+            мільйону фанатів протягом тижня. Вільна реєстрація відкрита 14 квітня 2012 року.</p>
+    </div>
+    <div class="right-block">
+        <img src="http://s57.radikal.ru/i156/1106/18/1ad4fed14bfd.jpg" class="trio" id="layer1" alt="1">
+        <img src="https://techland.time.com/wp-content/uploads/sites/15/2012/09/pottermore.jpg?w=600" id="layer2"
+             class="trio" alt="2">
+        <img src="https://static.onecms.io/wp-content/uploads/sites/6/2014/01/lockharts-office_612x380_1.jpg"
+             id="layer3"
+             class="trio" alt="3">
+    </div>
+
+</div>
+
+<hr align="center" width="95%" size="2" color="#000000"/>
+
+<div class="main" id="section2">
+    <h2>Форма реєстрації</h2>
+    <form>
+        <div class="left-block">
+            Завантажити фото профілю<img
+                src="https://i.pinimg.com/236x/e9/48/84/e94884295a92b05a1d63514e1136945b--harry-potter-cast-silhouette-cameo.jpg"
+                class="leftimg">
+            <br><input id="profileImage" type="file" name="profile_photo" placeholder="Photo">
+            <ul>
+                <li>
+                    <label for="name">Ім'я</label>
+                    <p style="margin: 0 0  20px 0"><input type="text" required placeholder="Ім'я" id="name"
+                                                          name="user_name"></p>
+                </li>
+                <li>
+                    <label for="surname">Прізвище</label>
+                    <br><input type="text" required placeholder="Прізвище" id="surname"
+                               name="user_surname">
+                </li>
+
+                <li>
+                    <label>Стать</label><br>
+                    <input type="radio" name="female" id="fem">Жіноча
+                    <input type="radio" name="male" id="male">Чоловіча<Br>
+                </li>
+                <li>
+                    <label for="age">Вік</label>
+                    <input type="number" id="age" name="age" step="1" min="5" max="100" width="100%">
+
+                </li>
+                <li>
+                    <label>Дата народження</label>
+                    <input type="date" name="dateOfBirth">
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="right-block">
+            <ul>
+                <li>
+                    <label>Країна проживання</label>
+                    <input list="countries" name="countries">
+                    <datalist id="countries">
+                        <option value="Ukraine">Україна</option>
+                        <option value="England">Англія</option>
+                        <option value="Germany">Німечина</option>
+                        <option value="France">Франція</option>
+                        <option value="Italy">Італія</option>
+                    </datalist>
+                </li>
+                <li>
+                    <label for="phone">Номер телефону</label>
+                    <br><input type="tel" id="phone" name="phone" placeholder="XXX-XX-XX"
+                               pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                </li>
+                <li>
+                    <label for="socialNetwork">Соцмережа</label>
+                    <br><input type="text" id="socialNetwork" required placeholder="Посилання на соцмережу"
+                               name="user_socialNetwork"/>
+                </li>
+                <li>
+                    <label for="mail">Електронна пошта</label>
+                    <br><input type="email" id="mail" required placeholder="Ел. пошта" name="user_mail">
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <input type="checkbox">Чи згодні Ви з умовами?
+            <button type="submit">Зареєструватися</button>
+            <button type="reset" value="Reset" style="background-color: #D22B2B;">Відмінити</button>
+        </div>
+    </form>
+</div>
+
+<hr align="center" width="95%" size="2" color="#000000"/>
+
+<div class="main" id="section3">
+    <h2>Форма входу</h2>
+    <form>
+        <div class="imgcontainer">
+            <img src="https://i.pinimg.com/236x/e9/48/84/e94884295a92b05a1d63514e1136945b--harry-potter-cast-silhouette-cameo.jpg"
+                 class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Логін</b></label>
+            <input type="text" id="uname" placeholder="Логін" name="uname" required>
+
+            <label for="psw"><b>Пароль</b></label>
+            <input type="password" id="psw" placeholder="Пароль" name="psw" required>
+            <button type="submit">Вхід</button>
+            <button type="reset" value="Reset" style="background-color: #D22B2B;">Відмінити</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember">Запам'ятати
+            </label>
+        </div>
+    </form>
+</div>
+
+<hr align="center" width="95%" size="2" color="#000000"/>
+
+<div class="main" id="section4">
+    <h2>Форма зворотнього зв'язку</h2>
+    <form>
+        <div style="float: left; padding: 20px">
+            <input type="text" placeholder="Ім'я" name="uname" required>
+            <br><br><input type="email" required placeholder="Ел. пошта" name="user_mail">
+            <br><br><input list="msg" placeholder="Тема листа">
+            <datalist id="msg">
+                <option value="1">Тема1</option>
+                <option value="2">Тема2</option>
+                <option value="3">Тема3</option>
+                <option value="4">Тема4</option>
+                <option value="5">Тема5</option>
+            </datalist>
+        </div>
+        <textarea name="message" cols="22" rows="5" style="margin: 10px 20px; width: 750px; height: 160px"
+                  placeholder="Повідомлення"></textarea>
+        <button type="submit">Відправити</button>
+        <button type="reset" value="Reset" style="background-color: #D22B2B;">Відмінити</button>
+    </form>
+    <div style="margin: 10px 30px">
+    <span><a href="https://www.instagram.com/olyatytarenko/">
+        <img src="https://play-lh.googleusercontent.com/h9jWMwqb-h9hjP4THqrJ50eIwPekjv7QPmTpA85gFQ10PjV02CoGAcYLLptqd19Sa1iJ"
+             width="5%" height="5%" style="border-radius: 50%;"></a>
+    </span>
+        <span><a href="https://www.facebook.com/profile.php?id=100009512806266">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEVCZ7L///+5w95GarM2YK80Xq+pttc+ZbFfe7s6YrCHmsmZqdA8Y7Ds8PdSdLlffr3V3OyQpNFrh8Lg5vIvW633+fyCmsxKb7fG0eier9WtutnAy+Ta4e91jsR8k8eMn8zP1ulvh8Dx9PkmVqvo7ff2SOu1AAAEYklEQVR4nO3da3uqOBSG4YDBmDYkHEStp1qn//83jqfuvWemoxGarBWu9/myP9XNfS0sIJGK7FpZ1Y0VY8k2dVXeZOL6T+6kNtTb9YMZLV3+h7B1cky8a0a69ktYWU29OUHStroKWzu+AV4ztr0I3TgneE67szCX1NsRMJlnonRj3UfPGVeKaswjPA2xEvV434XndC2aMe+kp920EeM5Vfu+sfsQQgghhBBCCCGEEPJJKWOM1lpKfc5cUkoo6g37mbQshG12+8XLe/1+6mWx3+8+GjezSyXnRXESq1SpyuhiPlmsq21bHrvudrc667ruWJafn227rQ6b9euisUWStySUFM3r6pfrfq/pEc18Oa2OfryzMLW7Lnry4Tu9JGeoin31DC+1GSrjDk/NL7UZmsn0aV9SM5R2+7wvoRmq4q3HABMSnoC9fMnspWqy6glMZIbKbPoCU5lhf2AaMyym/YFJzFDXA4ApzNA0/qfZSc5QyWfPRFOboR7yJkxBaNygfTSBvXTe+1CfyAyNGwjkPkOlhv2a4T9Ds+t3QZHODE0+FMh8hmo5eITMZygHna+lMEPZ63OLhITGlY8FD4Wc91LZ95OLfwgZz1ANufD9LWQ8Q2U/f0LIeIZm9gSk267y9Xo9/XfrD8bfFtELX95xs58tJ0rLb2IMFIXnCU05nRQmyRvbc7+jYTXTCeIuSa9r343ivB/eb+kjLJfpAk3jc9q9Y3wweJTZewhXyS4nEZ4XFu8Jj1Do18fA0iY8Qq/z7kNBvZVD8rkfM01aKNceb0PGFw6P8zlpS/tL2D7C2eiFSf8q9RIuqTdyUD7CCfVGDgpCCPkHIYT8gxBC/kEIIf8ghJB/EELIv1EI1Xc33r/6y0NoinuvcIr4E2Pl/rt24o88bnLf+/FLb7RE/fLYMLDP+diFK9pbNxGEa9o7qBGExKvaIghfxi7sdrQ3p8ILqR9FHl7YEt9+Cy+sJmMXHoiX24QX5sRrNcIL30Y/wz3xSobwQuq/WxFeSOuLIOxor50iCNvRCzfUC/uCC8mXLgYX1tQriIMLqQ+HwYUd+eLM0MLSUS9dDC3cki/ODC08EF8dhhduqN+GwYXEH5ZGENJ/BTiwsCM/HAYXkh8OQwuP9OvcQwupz7uDC7fUV4cn4XtQIfG9w3Nq6Wb/n/V4ZsS9n59x+LuG6l5zj5UKwtx5AWrdw0ax2uRuEELIPwgh5B+EEPIPQgj5ByGE/IMQQv5BCCH/IISQfxBCyD8IIeQfhBDyD0II+QchhPyDEEL+QQgh/yCEkH8QQsg/CCHkH4QQ8g9CCPkHIYT8gxBC/kEIIf8g/EEh0bMJogmtIHrMSyyhaURN8zCiWEJdi4rmgVKxhLISRA82jyQ0rhRZTjLESEKZZyLrHMU7MY5Qu+wkzFpLsJ9GERrbXoRZZeNPMYZQ2yq7CrPWydhjDC800rXZlzDrcid1VGRgodHS3f4HcXu1sqqbmCdwYYW2qavy9ip/A3YKUMidEST2AAAAAElFTkSuQmCC"
+                 width="5%" height="5%" style="border-radius: 50%;"></a>
+    </span>
+    </div>
+
+    <a href="#"><img
+            src="data:image/png;base64,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"
+            width="5%" height="10%" style="position: fixed; right: 20px; bottom: 20px; border-radius: 50%;"></a>
+</div>
+
+
+</body>
+</html>
